@@ -1,0 +1,5 @@
+SELECT maker, type
+FROM Product
+GROUP BY maker
+HAVING COUNT(DISTINCT model)>1 AND COUNT(DISTINCT type)=1
+ORDER BY maker
